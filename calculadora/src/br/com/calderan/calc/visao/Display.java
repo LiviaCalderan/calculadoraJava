@@ -18,6 +18,8 @@ public class Display extends JPanel implements MemoriaObservador {
 
 	public Display() {
 
+		Memoria.getInstancia().addObservador(this);
+
 		setBackground(new Color(46, 49, 50));
 		label = new JLabel(Memoria.getInstancia().getTextoAtual());
 		label.setForeground(Color.WHITE);
